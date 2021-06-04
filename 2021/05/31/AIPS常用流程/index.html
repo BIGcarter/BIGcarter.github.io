@@ -1,293 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>麦晓枫的Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="AIPS常用工具  uvplt 展示uv覆盖 task ‘uvplt’  possm 展示相位与幅度随频率的变化 task ‘possm’ ‘b’&#x2F;‘c’翻页，’d’退出  accor 归一化可见度 task ‘accor’  snplt 展示新SN表（可展示CL表或TY表）  clcal 将SN表应用到CL表上  vlbautil run vlbautil  vlbamcal  setjy 设置">
-<meta property="og:type" content="article">
-<meta property="og:title" content="麦晓枫的Blog">
-<meta property="og:url" content="http://example.com/2021/05/31/AIPS%E5%B8%B8%E7%94%A8%E6%B5%81%E7%A8%8B/index.html">
-<meta property="og:site_name" content="麦晓枫的Blog">
-<meta property="og:description" content="AIPS常用工具  uvplt 展示uv覆盖 task ‘uvplt’  possm 展示相位与幅度随频率的变化 task ‘possm’ ‘b’&#x2F;‘c’翻页，’d’退出  accor 归一化可见度 task ‘accor’  snplt 展示新SN表（可展示CL表或TY表）  clcal 将SN表应用到CL表上  vlbautil run vlbautil  vlbamcal  setjy 设置">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-31T07:57:49.105Z">
-<meta property="article:modified_time" content="2021-06-04T02:31:12.402Z">
-<meta property="article:author" content="Xiaofeng Mai">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="麦晓枫的Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">麦晓枫的Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-AIPS常用流程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/05/31/AIPS%E5%B8%B8%E7%94%A8%E6%B5%81%E7%A8%8B/" class="article-date">
-  <time class="dt-published" datetime="2021-05-31T07:57:49.105Z" itemprop="datePublished">2021-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>AIPS常用工具</p>
-<ol>
-<li><p>uvplt 展示uv覆盖</p>
-<p>task ‘uvplt’</p>
-</li>
-<li><p>possm 展示相位与幅度随频率的变化</p>
-<p>task ‘possm’</p>
-<p>‘b’/‘c’翻页，’d’退出</p>
-</li>
-<li><p>accor 归一化可见度</p>
-<p>task ‘accor’</p>
-</li>
-<li><p>snplt 展示新SN表（可展示CL表或TY表）</p>
-</li>
-<li><p>clcal 将SN表应用到CL表上</p>
-</li>
-<li><p>vlbautil</p>
-<p>run vlbautil </p>
-<p>vlbamcal</p>
-</li>
-<li><p>setjy 设置流量密度</p>
-<p>task ‘setjy’</p>
-</li>
-<li><p>apcal 应用参数到SN表中，如SEFD</p>
-<p>task ‘apcal’</p>
-</li>
-<li><p>fring 条纹拟合</p>
-<p>task ‘fring’</p>
-</li>
-<li><p>bpass 带通校准，将带通校准的信息写入BP表</p>
-<p>task ‘bpass’</p>
-</li>
-<li><p>tget 参数与上次运行的相同</p>
-</li>
-<li><p>split 应用CL表并沿频率积分</p>
-</li>
-</ol>
-<p>AIPS校准的过程可以简单概括为：SN.(Version)的建立，SN表应用到CL表来更新CL.(Version)表</p>
-<p>流程:</p>
-<p>第一步校准：归一化可见度</p>
-<p>accor$\rarr$ snplt(查看SN表)$\rarr$clcal$\rarr$snplt(查看CL表)</p>
-<p>得到SN.1并应用于CL.1，得到CL.2</p>
-<p>第二步校准：校正SEFD</p>
-<p>vlbautil(得到GC和TY表)$\rarr$setjy$\rarr$apcal(应用SEFD于SN表中)$\rarr$snplt$\rarr$clcal</p>
-<p>得到SN.2并应用于CL.2，得到CL.3</p>
-<p>==至此，幅度校准完毕，即将进行相位校准。==</p>
-<p>第三步校准：条纹拟合（时延校正）</p>
-<p>fring(得到残余时延应用于SN表)$\rarr$snplt(查看SN表)$\rarr$clcal$\rarr$snplt(查看CL表)</p>
-<p>得到SN.3并应用于CL.3，得到CL.4</p>
-<p>第四步校准：带通校准(先幅度和后相位)</p>
-<p>bpass(获得带通校准信息，写入BP表)$\rarr$possm(查看BP表)$\rarr$(tget) bpass(续写BP表)$\rarr$(tget) possm</p>
-<p>&lt;(tget)为带通校正的相位校正部分。&gt;</p>
-<p>得到BP表</p>
-<p>第五步：查看校准结果</p>
-<p>(tget) possm</p>
-<p>应用CL.4表，得到校准后的可见度数据</p>
-<p>==至此，相位校准结束。可见度校准结束==</p>
-<p>第六步：应用最终的CL表</p>
-<p>split</p>
-<p>将第一到五步得到CL表应用于未校准可见度，输出校准后的可见度数据</p>
-<p>第七步：输出fits文件</p>
-<p>fittp</p>
-<p>将校准后的可见度数据输出至fits文件中，用于后续difmap成图处理或者相位参考。</p>
-<p><a target="_blank" rel="noopener" href="https://casaguides.nrao.edu/index.php/AIPS-Spectral_Lines_and_Astrometry">https://casaguides.nrao.edu/index.php/AIPS-Spectral_Lines_and_Astrometry</a></p>
-<p>VLBA Pipeline，带有vlba开头的procedure都是专用于处理vlba产生的数据。</p>
-<ol>
-<li>run vlbautil</li>
-</ol>
-<p>vlbautil是个run file，里头定义了VLBA数据处理的一些procedures，可以看作是脚本</p>
-<ol start="2">
-<li><p>vlbaecr</p>
-<p>procedure，校正电离层时延</p>
-</li>
-<li><p>vlbaeops </p>
-<p>procedure，校正地球自转影响</p>
-</li>
-<li><p>vlbaccor</p>
-<p>procedure，校正由于数字采样带来的信号损失率</p>
-</li>
-<li><p>vlbacrpl</p>
-<p>procedure，查看条纹，调用possm</p>
-</li>
-<li><p>vlbampcl</p>
-<p>procedure，校正设备时延</p>
-</li>
-<li><p>vlbabpss</p>
-<p>procedure，校正带通影响</p>
-</li>
-<li><p>vlbaamp</p>
-<p>procedure，校正幅度</p>
-</li>
-<li><p>vlbapang</p>
-<p>procedure，校正视差角</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/31/AIPS%E5%B8%B8%E7%94%A8%E6%B5%81%E7%A8%8B/" data-id="ckphyt2fk00007rbq5f3ngyhz" data-title="" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2021/05/31/VLBI%E6%95%B0%E6%8D%AE%E6%A0%A1%E5%87%86/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
-  
-</article>
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-  
-    
+{% block page_class %}page-post-detail{% endblock %}
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li></ul>
+
+{% block content %}
+
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
+
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/05/31/AIPS%E5%B8%B8%E7%94%A8%E6%B5%81%E7%A8%8B/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/05/31/VLBI%E6%95%B0%E6%8D%AE%E6%A0%A1%E5%87%86/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 Xiaofeng Mai<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
